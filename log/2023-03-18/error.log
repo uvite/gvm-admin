@@ -1,0 +1,28 @@
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:11:57.569	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:8888: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:12:28.630	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_user.go:56	登陆失败! 用户名不存在或者密码错误!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:12:43.891	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_user.go:56	登陆失败! 用户名不存在或者密码错误!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:14:29.386	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:23:17.671	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:25:52.258	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:36:33.015	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:38:14.834	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:51:57.635	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:51:59.470	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:52:16.704	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:52:19.209	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:54:09.833	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:55:45.179	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:56:33.074	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:57:11.248	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_dictionary.go:108	字典未创建或未开启!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 18:58:20.163	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 19:20:59.811	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 19:55:35.038	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 20:59:42.653	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 21:29:30.159	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 21:34:42.605	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 21:40:55.606	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 22:52:33.874	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 23:03:15.514	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 23:21:19.936	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 23:51:34.571	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/18 - 23:59:01.980	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection

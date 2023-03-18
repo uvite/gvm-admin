@@ -1,0 +1,22 @@
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:04:33.006	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:22:45.239	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:25:33.592	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:34:59.742	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:47:24.189	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:52:02.360	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 00:52:46.579	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:08:38.129	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:11:29.346	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:15:06.116	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:19:40.849	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:21:09.950	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:25:41.229	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 01:46:11.497	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 02:42:10.612	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:11:31.182	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:13:42.380	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_authority.go:123	批量删除失败!	{"error": "此角色有用户正在使用禁止删除"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:34:13.591	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:39:06.127	[31merror[0m	/pine/gin-vue-admin/server/api/v1/system/sys_user.go:164	注册失败!	{"error": "sql: converting argument $16 type: unsupported type system.BackendSetting, a struct"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:41:17.337	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:52:55.135	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/19 - 03:59:01.778	[31merror[0m	/pine/gin-vue-admin/server/core/server.go:48	accept tcp [::]:7654: use of closed network connection
