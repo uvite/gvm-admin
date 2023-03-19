@@ -445,7 +445,8 @@ func (b *BaseApi) GetUserInfo(c *gin.Context) {
 	}
 
 	fmt.Println(utils.GetUserAuthorityId(c))
-	menus, err := menuService.GetMenuTree(utils.GetUserAuthorityId(c))
+	authorityId:=ReqUser.AuthorityId
+	menus, err := menuService.GetMenuTree(authorityId)
 	if menus == nil {
 		menus = []system.SysMenu{}
 	}

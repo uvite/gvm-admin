@@ -220,10 +220,12 @@ func (authorityService *AuthorityService) SetDataAuthority(auth system.SysAuthor
 //@return: error
 
 func (authorityService *AuthorityService) SetMenuAuthority(auth *system.SysAuthority) error {
+
 	var s system.SysAuthority
 	global.GVA_DB.Preload("SysBaseMenus").First(&s, "authority_id = ?", auth.AuthorityId)
 	err := global.GVA_DB.Model(&s).Association("SysBaseMenus").Replace(&auth.SysBaseMenus)
 	return err
+
 }
 
 //@author: [piexlmax](https://github.com/piexlmax)

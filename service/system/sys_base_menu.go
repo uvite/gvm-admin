@@ -2,6 +2,8 @@ package system
 
 import (
 	"errors"
+	"fmt"
+	request2 "github.com/flipped-aurora/gin-vue-admin/server/model/common/request"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
@@ -40,6 +42,37 @@ func (baseMenuService *BaseMenuService) DeleteBaseMenu(id int) (err error) {
 	}
 	return err
 }
+func (baseMenuService *BaseMenuService) DeleteBaseMenus(ids request2.IdsReq) (err error) {
+
+	for _, id := range ids.Ids {
+
+		err = global.GVA_DB.Preload("MenuBtn").Preload("Parameters").Where("parent_id = ?", id).First(&system.SysBaseMenu{}).Error
+		if err != nil {
+			var menu system.SysBaseMenu
+			db := global.GVA_DB.Preload("SysAuthoritys").Where("id = ?", id).First(&menu).Delete(&menu)
+			err = global.GVA_DB.Delete(&system.SysBaseMenuParameter{}, "sys_base_menu_id = ?", id).Error
+			err = global.GVA_DB.Delete(&system.SysBaseMenuBtn{}, "sys_base_menu_id = ?", id).Error
+			err = global.GVA_DB.Delete(&system.SysAuthorityBtn{}, "sys_menu_id = ?", id).Error
+			if err != nil {
+				return err
+			}
+			if len(menu.SysAuthoritys) > 0 {
+				err = global.GVA_DB.Model(&menu).Association("SysAuthoritys").Delete(&menu.SysAuthoritys)
+			} else {
+				err = db.Error
+				if err != nil {
+					return
+				}
+			}
+		} else {
+			return errors.New("此菜单存在子菜单不可删除")
+		}
+		return err
+	}
+
+	return
+
+}
 
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: UpdateBaseMenu
@@ -49,6 +82,7 @@ func (baseMenuService *BaseMenuService) DeleteBaseMenu(id int) (err error) {
 
 func (baseMenuService *BaseMenuService) UpdateBaseMenu(menu system.SysBaseMenu) (err error) {
 	var oldMenu system.SysBaseMenu
+	fmt.Printf("%+v", menu)
 	upDateMap := make(map[string]interface{})
 	upDateMap["keep_alive"] = menu.KeepAlive
 	upDateMap["close_tab"] = menu.CloseTab
@@ -62,6 +96,9 @@ func (baseMenuService *BaseMenuService) UpdateBaseMenu(menu system.SysBaseMenu) 
 	upDateMap["active_name"] = menu.ActiveName
 	upDateMap["icon"] = menu.Icon
 	upDateMap["sort"] = menu.Sort
+	upDateMap["code"] = menu.Code
+	upDateMap["route"] = menu.Route
+	upDateMap["status"] = menu.Status
 
 	err = global.GVA_DB.Transaction(func(tx *gorm.DB) error {
 		db := tx.Where("id = ?", menu.ID).Find(&oldMenu)

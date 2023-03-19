@@ -132,11 +132,11 @@ func (a *AuthorityMenuApi) AddBaseMenu(c *gin.Context) {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
-	err = utils.Verify(menu.Meta, utils.MenuMetaVerify)
-	if err != nil {
-		response.FailWithMessage(err.Error(), c)
-		return
-	}
+	//err = utils.Verify(menu.Meta, utils.MenuMetaVerify)
+	//if err != nil {
+	//	response.FailWithMessage(err.Error(), c)
+	//	return
+	//}
 	err = menuService.AddBaseMenu(menu)
 	if err != nil {
 		global.GVA_LOG.Error("添加失败!", zap.Error(err))
@@ -156,7 +156,7 @@ func (a *AuthorityMenuApi) AddBaseMenu(c *gin.Context) {
 // @Success   200   {object}  response.Response{msg=string}  "删除菜单"
 // @Router    /menu/deleteBaseMenu [post]
 func (a *AuthorityMenuApi) DeleteBaseMenu(c *gin.Context) {
-	var menu request.GetById
+	var menu request.IdsReq
 	err := c.ShouldBindJSON(&menu)
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
@@ -167,7 +167,7 @@ func (a *AuthorityMenuApi) DeleteBaseMenu(c *gin.Context) {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
-	err = baseMenuService.DeleteBaseMenu(menu.ID)
+	err = baseMenuService.DeleteBaseMenus(menu)
 	if err != nil {
 		global.GVA_LOG.Error("删除失败!", zap.Error(err))
 		response.FailWithMessage("删除失败", c)
@@ -274,4 +274,26 @@ func (a *AuthorityMenuApi) GetMenuList(c *gin.Context) {
 		Page:     pageInfo.Page,
 		PageSize: pageInfo.PageSize,
 	}, "获取成功", c)
+}
+func (a *AuthorityMenuApi) GetMenuTree(c *gin.Context) {
+
+
+	menus, err := menuService.GetBaseMenuTree()
+	if err != nil {
+		global.GVA_LOG.Error("获取失败!", zap.Error(err))
+		response.FailWithMessage("获取失败", c)
+		return
+	}
+	response.OkWithDetailed(menus, "获取成功", c)
+}
+func (a *AuthorityMenuApi) Tree(c *gin.Context) {
+
+
+	menus, err := menuService.GetBaseMenuTree()
+	if err != nil {
+		global.GVA_LOG.Error("获取失败!", zap.Error(err))
+		response.FailWithMessage("获取失败", c)
+		return
+	}
+	response.OkWithDetailed(menus, "获取成功", c)
 }
