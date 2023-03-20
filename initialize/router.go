@@ -78,6 +78,7 @@ func Routers() *gin.Engine {
 		botsRouter.InitGvmPositionsRouter(PrivateGroup)
 		botsRouter.InitGvmTradesRouter(PrivateGroup)
 		botsRouter.InitGvmStrategieRouter(PrivateGroup)
+		botsRouter.InitGvmBaseRouter(PrivateGroup)
 	}
 
 	global.GVA_LOG.Info("router register success")

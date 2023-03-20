@@ -62,3 +62,7 @@
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 03:58:41.824	[34minfo[0m	/pine/gvm-admin/initialize/router.go:39	register swagger handler
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 03:58:41.828	[34minfo[0m	/pine/gvm-admin/initialize/router.go:83	router register success
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 03:58:41.828	[34minfo[0m	/pine/gvm-admin/core/server.go:36	server run success on 	{"address": ":7654"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 11:04:13.822	[34minfo[0m	/pine/gvm-admin/initialize/gorm.go:66	register table success
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 11:04:13.827	[34minfo[0m	/pine/gvm-admin/initialize/router.go:39	register swagger handler
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 11:04:13.829	[34minfo[0m	/pine/gvm-admin/initialize/router.go:83	router register success
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/20 - 11:04:13.829	[34minfo[0m	/pine/gvm-admin/core/server.go:36	server run success on 	{"address": ":7654"}
