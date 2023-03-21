@@ -1,7 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"github.com/flipped-aurora/gin-vue-admin/server/gvmbot"
 	"go.uber.org/zap"
+	"os"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/core"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
@@ -26,6 +29,7 @@ func main() {
 	global.GVA_LOG = core.Zap() // 初始化zap日志库
 	zap.ReplaceGlobals(global.GVA_LOG)
 	global.GVA_DB = initialize.Gorm() // gorm连接数据库
+	//dev()
 	initialize.Timer()
 	initialize.DBList()
 	if global.GVA_DB != nil {
@@ -34,5 +38,21 @@ func main() {
 		db, _ := global.GVA_DB.DB()
 		defer db.Close()
 	}
+	//dev()
 	core.RunWindowsServer()
+}
+
+func dev() {
+	pwd, _ := os.Getwd()
+
+	filepath := fmt.Sprintf("%s/abc/%s", pwd, ".env.local")
+	configpath := fmt.Sprintf("%s/abc/%s", pwd, "bbgo.yaml")
+
+	ex := gvmbot.New(filepath, configpath, "abc")
+	a := ex.GetPostions()
+	fmt.Println(a)
+	//
+	//e := ex.GetTrades()
+	//fmt.Println(e)
+
 }

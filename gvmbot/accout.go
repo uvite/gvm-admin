@@ -3,11 +3,12 @@ package gvmbot
 import (
 	"context"
 	"fmt"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/bots"
 	"github.com/uvite/gvmbot/pkg/bbgo"
-	"github.com/uvite/gvmbot/pkg/types"
 )
 
-func (ex Exchange) GetAccount() (balance *types.Balance, ok error) {
+func (ex Exchange) GetAccount() (err error) {
 	ctx := context.Background()
 	environ := bbgo.NewEnvironment()
 	if err := environ.ConfigureDatabase(ctx); err != nil {
@@ -19,23 +20,30 @@ func (ex Exchange) GetAccount() (balance *types.Balance, ok error) {
 	}
 	fmt.Println("[0]", ex.sessionName)
 
-	if len(ex.sessionName) > 0 {
-		session, ok := environ.Session(ex.sessionName)
-		if !ok {
-
-		}
-
-		a, err := session.Exchange.QueryAccount(ctx)
-
-		if err != nil {
-
-		}
-		balance, ok := a.Balance("USDT")
-		//fmt.Println(balance.Available, balance.Locked)
-		//a.Print()
-		return &balance, nil
+	session, ok := environ.Session(ex.sessionName)
+	if !ok {
 
 	}
 
-	return &types.Balance{}, nil
+	if err != nil {
+		return err
+	}
+
+	a, err := session.Exchange.QueryAccount(ctx)
+
+	if err != nil {
+	}
+	db := global.GVA_DB
+	balance, ok := a.Balance("USDT")
+	fmt.Printf("%f,%f", balance.Available.Float64(), balance.Locked.Float64())
+	fmt.Printf("%s", balance.String())
+	fmt.Printf("%s", ex.exchangeId)
+	dt := &bots.GvmBalance{
+		ExchangeId: ex.exchangeId,
+		Available:  balance.Available.String(),
+		Locked:     balance.Locked.String(),
+	}
+	db.Create(dt)
+
+	return nil
 }

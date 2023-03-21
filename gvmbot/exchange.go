@@ -13,9 +13,10 @@ type Exchange struct {
 	userConfig  *bbgo.Config
 	sessionName string
 	symbol      string
+	exchangeId  string
 }
 
-func New(dotenvFile string,configFile string) *Exchange {
+func New(dotenvFile string, configFile string, exchangeId string) *Exchange {
 
 	if _, err := os.Stat(dotenvFile); err == nil {
 		if err := godotenv.Load(dotenvFile); err != nil {
@@ -29,15 +30,16 @@ func New(dotenvFile string,configFile string) *Exchange {
 	//
 	exchange, symbol := viper.GetString("exchange"),
 		viper.GetString("symbol")
-	fmt.Println(exchange, symbol)
+	fmt.Println("[exchange]",exchange, symbol,exchangeId)
 	userConfig, err := bbgo.Load(configFile, false)
-	if err!=nil{
+	if err != nil {
 		fmt.Println(err)
 	}
 	return &Exchange{
 		sessionName: exchange,
 		symbol:      symbol,
 		userConfig:  userConfig,
+		exchangeId:  exchangeId,
 	}
 
 }

@@ -6,4 +6,6 @@ type ServiceGroup struct {
 	GvmPositionsService
 	GvmTradesService
 	GvmStrategieService
+	GvmExchangeService
+	GvmAlarmService
 }

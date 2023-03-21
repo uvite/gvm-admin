@@ -15,13 +15,13 @@ func (s *GvmBalanceRouter) InitGvmBalanceRouter(Router *gin.RouterGroup) {
 	gvmBalanceRouterWithoutRecord := Router.Group("gvmBalance")
 	var gvmBalanceApi = v1.ApiGroupApp.BotsApiGroup.GvmBalanceApi
 	{
-		gvmBalanceRouter.POST("createGvmBalance", gvmBalanceApi.CreateGvmBalance)   // 新建GvmBalance
-		gvmBalanceRouter.DELETE("deleteGvmBalance", gvmBalanceApi.DeleteGvmBalance) // 删除GvmBalance
+		gvmBalanceRouter.POST("createGvmBalance", gvmBalanceApi.CreateGvmBalance)             // 新建GvmBalance
+		gvmBalanceRouter.DELETE("deleteGvmBalance", gvmBalanceApi.DeleteGvmBalance)           // 删除GvmBalance
 		gvmBalanceRouter.DELETE("deleteGvmBalanceByIds", gvmBalanceApi.DeleteGvmBalanceByIds) // 批量删除GvmBalance
-		gvmBalanceRouter.PUT("updateGvmBalance", gvmBalanceApi.UpdateGvmBalance)    // 更新GvmBalance
+		gvmBalanceRouter.PUT("updateGvmBalance", gvmBalanceApi.UpdateGvmBalance)              // 更新GvmBalance
 	}
 	{
-		gvmBalanceRouterWithoutRecord.GET("findGvmBalance", gvmBalanceApi.FindGvmBalance)        // 根据ID获取GvmBalance
-		gvmBalanceRouterWithoutRecord.GET("getGvmBalanceList", gvmBalanceApi.GetGvmBalanceList)  // 获取GvmBalance列表
+		gvmBalanceRouterWithoutRecord.GET("getGvmBalance", gvmBalanceApi.GetGvmBalance)
+		gvmBalanceRouterWithoutRecord.GET("getGvmBalanceList", gvmBalanceApi.GetGvmBalanceList) // 获取GvmBalance列表
 	}
 }

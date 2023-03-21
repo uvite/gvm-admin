@@ -6,5 +6,7 @@ type ApiGroup struct {
 	GvmPositionsApi
 	GvmTradesApi
 	GvmStrategieApi
+	GvmExchangeApi
+	GvmAlarmApi
 	GvmBaseApi
 }

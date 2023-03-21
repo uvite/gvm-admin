@@ -168,3 +168,20 @@ func (gvmBalanceApi *GvmBalanceApi) GetGvmBalanceList(c *gin.Context) {
 		}, "获取成功", c)
 	}
 }
+
+//获取交易所资产
+
+func (gvmBalanceApi *GvmBalanceApi) GetGvmBalance(c *gin.Context) {
+	var gvmBalance bots.GvmBalance
+	err := c.ShouldBindQuery(&gvmBalance)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+	if regvmBalance, err := gvmBalanceService.GetGvmBalanceByExchange(gvmBalance.ExchangeId); err != nil {
+		global.GVA_LOG.Error("查询失败!", zap.Error(err))
+		response.FailWithMessage("查询失败", c)
+	} else {
+		response.OkWithData( regvmBalance, c)
+	}
+}

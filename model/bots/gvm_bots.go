@@ -17,6 +17,7 @@ type GvmBots struct {
 	Status      *int   `json:"status" form:"status" gorm:"column:status;comment:状态 (1正常 2停用);"`
 	Sort        *int   `json:"sort" form:"sort" gorm:"column:sort;comment:排序;"`
 	StrategieId uint64 `json:"strategie_id" form:"strategie_id" gorm:"column:strategie_id;comment:排序;"`
+	ExchangeId  *string    `json:"exchange_id" form:"exchange_id" gorm:"column:exchange_id;comment:;size:20;"`
 
 	Remark string `json:"remark" form:"remark" gorm:"column:remark;comment:;size:255;"`
 }

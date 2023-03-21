@@ -4,3 +4,42 @@
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 02:14:31.905	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 02:17:53.530	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 02:20:27.392	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:14:47.500	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:17:47.119	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_exchange.go:109	更新失败!	{"error": "Error 1054 (42S22): Unknown column 'path' in 'field list'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:32:23.832	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:33:58.241	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_exchange.go:39	创建失败!	{"error": "Error 1406 (22001): Data too long for column 'path' at row 1"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:34:05.402	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_exchange.go:39	创建失败!	{"error": "Error 1406 (22001): Data too long for column 'path' at row 1"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:35:07.008	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_exchange.go:39	创建失败!	{"error": "Error 1406 (22001): Data too long for column 'path' at row 1"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:36:58.545	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 13:59:47.456	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:09:02.318	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:16:44.090	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:22:55.037	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:32:01.671	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:34:15.974	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:35:15.479	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 14:38:38.384	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:10:52.581	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:20:35.941	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:20:40.727	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:21:05.909	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:23:25.488	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:23:58.843	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:24:19.579	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:24:40.295	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:26:30.296	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 15:44:35.922	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 16:38:59.229	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 16:51:05.397	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 16:58:49.791	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:21:47.374	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:38:37.489	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:39:05.632	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "Error 1054 (42S22): Unknown column 'coee' in 'where clause'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:39:53.406	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "Error 1054 (42S22): Unknown column 'coee' in 'where clause'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:39:53.436	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "Error 1054 (42S22): Unknown column 'coee' in 'where clause'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:39:53.504	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "Error 1054 (42S22): Unknown column 'coee' in 'where clause'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:40:00.833	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "Error 1054 (42S22): Unknown column 'coee' in 'where clause'"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 17:40:51.604	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 18:39:26.592	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 18:39:26.605	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 19:46:56.723	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection

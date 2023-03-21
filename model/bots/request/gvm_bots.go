@@ -14,8 +14,11 @@ type GvmBotsSearch struct {
 }
 
 type GvmBotsLogin struct {
+	Id     string `json:"id" form:"id"`
 	AppId     string `json:"app_id" form:"app_id"`
 	AppSecret string `json:"app_secret" form:"app_secret"`
+	ExchangePath string `json:"exchange_path" form:"exchange_path"`
+	ExchangeCode string `json:"exchange_code" form:"exchange_code"`
 	Code  string `json:"code" form:"code"`
 	File  string `json:"file" form:"file"`
 	Price int    `json:"price" form:"price"`

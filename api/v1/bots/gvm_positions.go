@@ -130,7 +130,7 @@ func (gvmPositionsApi *GvmPositionsApi) FindGvmPositions(c *gin.Context) {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
-	if regvmPositions, err := gvmPositionsService.GetGvmPositions(gvmPositions.ID); err != nil {
+	if regvmPositions, err := gvmPositionsService.GetGvmPositions(gvmPositions.Id); err != nil {
         global.GVA_LOG.Error("查询失败!", zap.Error(err))
 		response.FailWithMessage("查询失败", c)
 	} else {

@@ -6,5 +6,7 @@ type RouterGroup struct {
 	GvmPositionsRouter
 	GvmTradesRouter
 	GvmStrategieRouter
+	GvmExchangeRouter
 	GvmBaseRouter
+	GvmAlarmRouter
 }

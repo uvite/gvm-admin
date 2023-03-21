@@ -17,6 +17,7 @@ func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
 
 
 		gvmBaseRouter.POST("vm/file", gvmBotsApi.RunVm)             // 新建GvmBots
+		gvmBaseRouter.POST("vm/sync", gvmBotsApi.RunSync)             // 新建GvmBots
 
 	}
 

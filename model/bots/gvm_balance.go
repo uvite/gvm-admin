@@ -8,15 +8,16 @@ import (
 
 // GvmBalance 结构体
 type GvmBalance struct {
-      global.GVA_MODEL
-      Uuid  string `json:"uuid" form:"uuid" gorm:"column:uuid;comment:;size:255;"`
-      Balance  *float64 `json:"balance" form:"balance" gorm:"column:balance;comment:;size:10;"`
-      Datetime  *time.Time `json:"datetime" form:"datetime" gorm:"column:datetime;comment:;"`
-}
+	global.GVA_MODEL
 
+	ExchangeId  string    `json:"exchange_id" form:"exchange_id" gorm:"column:exchange_id;comment:;size:20;"`
+
+	Available string    `json:"available" form:"available" gorm:"column:available;"`
+	Locked    string    `json:"locked" form:"locked" gorm:"column:locked;"`
+	Datetime  *time.Time `json:"datetime" form:"datetime" gorm:"column:datetime;comment:;"`
+}
 
 // TableName GvmBalance 表名
 func (GvmBalance) TableName() string {
-  return "gvm_balance"
+	return "gvm_balance"
 }
-

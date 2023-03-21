@@ -3,6 +3,8 @@ package gvmbot
 import (
 	"context"
 	"fmt"
+	"github.com/flipped-aurora/gin-vue-admin/server/global"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/bots"
 	log "github.com/sirupsen/logrus"
 	"github.com/uvite/gvmbot/pkg/bbgo"
 	"github.com/uvite/gvmbot/pkg/types"
@@ -27,7 +29,7 @@ func (ex Exchange) GetTrades() (err error) {
 	}
 
 	var limit int64
-	limit = 100
+	limit = 10
 	now := time.Now()
 	since := now.Add(-24 * time.Hour)
 
@@ -47,8 +49,22 @@ func (ex Exchange) GetTrades() (err error) {
 		return err
 	}
 
+	db := global.GVA_DB
+	//if db==nil{
+	//	global.GVA_DB = initialize.Gorm()
+	//	db = global.GVA_DB
+	//}
+
+	//data := []bots.GvmTrades{}
 	log.Infof("%d trades", len(trades))
 	for _, trade := range trades {
+		dt := bots.GvmTrades{
+			ExchangeId: ex.exchangeId,
+			Trade:      trade,
+		}
+		db.Create(dt)
+		//data = append(data, dt)
+
 		log.Infof("TRADE %s %s %4s %s @ %s orderID %d %s amount %v , fee %v %s ",
 			trade.Exchange.String(),
 			trade.Symbol,
@@ -61,6 +77,7 @@ func (ex Exchange) GetTrades() (err error) {
 			trade.Fee,
 			trade.FeeCurrency)
 	}
+	//db.Create(data)
 
-	return   nil
+	return nil
 }
