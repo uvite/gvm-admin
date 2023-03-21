@@ -8,6 +8,7 @@ require (
 	github.com/aws/aws-sdk-go v1.42.27
 	github.com/casbin/casbin/v2 v2.51.0
 	github.com/casbin/gorm-adapter/v3 v3.7.3
+	github.com/davecgh/go-spew v1.1.1
 	github.com/dop251/goja v0.0.0-20230304130813-e2f543bf4b4c
 	github.com/ethereum/go-ethereum v1.10.23
 	github.com/flipped-aurora/ws v1.0.2
@@ -29,6 +30,7 @@ require (
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/shirou/gopsutil/v3 v3.22.5
+	github.com/sirupsen/logrus v1.9.0
 	github.com/songzhibin97/gkit v1.2.7
 	github.com/spf13/afero v1.9.5
 	github.com/spf13/viper v1.15.0
@@ -38,11 +40,11 @@ require (
 	github.com/tencentyun/cos-go-sdk-v5 v0.7.19
 	github.com/unrolled/secure v1.0.7
 	github.com/uvite/gvm v0.0.0-20230307170524-b70f4359ffd4
-	github.com/uvite/gvmbot v0.0.0-20230320150225-d17ada61a0ea
+	github.com/uvite/gvmbot v0.0.0-20230321214356-8d88297fb4fa
 	go.uber.org/zap v1.21.0
-	golang.org/x/crypto v0.6.0
+	golang.org/x/crypto v0.7.0
 	golang.org/x/sync v0.1.0
-	golang.org/x/text v0.7.0
+	golang.org/x/text v0.8.0
 	gorm.io/driver/mysql v1.3.3
 	gorm.io/driver/postgres v1.3.4
 	gorm.io/driver/sqlserver v1.3.2
@@ -78,7 +80,6 @@ require (
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/cockroachdb/apd v1.1.0 // indirect
 	github.com/codingconcepts/env v0.0.0-20200821220118-a8fbf8d84482 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
 	github.com/denisenkom/go-mssqldb v0.12.2 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
@@ -150,8 +151,9 @@ require (
 	github.com/mozillazg/go-httpheader v0.2.1 // indirect
 	github.com/mstoykov/atlas v0.0.0-20220811071828-388f114305dd // indirect
 	github.com/mstoykov/k6-taskqueue-lib v0.1.0 // indirect
+	github.com/nats-io/jwt/v2 v2.4.0 // indirect
 	github.com/nats-io/nats.go v1.24.0 // indirect
-	github.com/nats-io/nkeys v0.3.0 // indirect
+	github.com/nats-io/nkeys v0.4.4 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
@@ -167,7 +169,6 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/serenize/snaker v0.0.0-20201027110005-a7ad2135616e // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
-	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/slack-go/slack v0.12.1 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
@@ -189,10 +190,10 @@ require (
 	go.uber.org/multierr v1.9.0 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/image v0.0.0-20220302094943-723b81ca9867 // indirect
-	golang.org/x/net v0.7.0 // indirect
-	golang.org/x/sys v0.5.0 // indirect
+	golang.org/x/net v0.8.0 // indirect
+	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
-	golang.org/x/tools v0.3.0 // indirect
+	golang.org/x/tools v0.6.0 // indirect
 	gonum.org/v1/gonum v0.12.0 // indirect
 	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	google.golang.org/grpc v1.53.0 // indirect

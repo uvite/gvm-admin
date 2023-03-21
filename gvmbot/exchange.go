@@ -14,6 +14,8 @@ type Exchange struct {
 	sessionName string
 	symbol      string
 	exchangeId  string
+	okQty bool             `json:"okLimit"` //操蛋的okex 张币转换
+
 }
 
 func New(dotenvFile string, configFile string, exchangeId string) *Exchange {

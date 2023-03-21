@@ -43,3 +43,8 @@
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 18:39:26.592	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "record not found"}
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 18:39:26.605	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
 [github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 19:46:56.723	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 20:59:28.421	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 20:59:28.425	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 23:54:02.929	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_balance.go:182	查询失败!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 23:54:02.942	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "record not found"}
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/21 - 23:54:23.407	[31merror[0m	/pine/gvm-admin/api/v1/bots/gvm_base.go:31	不存在交易所Api!	{"error": "record not found"}
