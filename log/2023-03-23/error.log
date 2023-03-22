@@ -1,0 +1,24 @@
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 00:21:35.957	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 00:25:17.133	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 00:42:46.561	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 00:44:45.797	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 00:53:54.725	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 01:00:17.607	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 01:06:29.904	[31merror[0m	/pine/gvm-admin/core/server.go:41	net.FileListener error: file file+net : setnonblock: inappropriate ioctl for device
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 01:10:17.228	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 01:10:20.580	[31merror[0m	/pine/gvm-admin/core/server.go:41	net.FileListener error: file file+net : setnonblock: inappropriate ioctl for device
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 02:26:29.975	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 02:50:57.888	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 02:52:55.153	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 02:59:56.355	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:05:58.144	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:11:43.993	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:18:24.398	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:21:17.695	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:22:29.943	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:29:09.852	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:36:36.438	[31merror[0m	/pine/gvm-admin/core/server.go:41	net.FileListener error: file file+net : setnonblock: inappropriate ioctl for device
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:37:00.093	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:38:26.278	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:46:10.702	[31merror[0m	/pine/gvm-admin/core/server.go:41	net.FileListener error: file file+net : setnonblock: inappropriate ioctl for device
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/23 - 03:46:24.328	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection

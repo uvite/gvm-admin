@@ -1,10 +1,14 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"github.com/flipped-aurora/gin-vue-admin/server/gvmbot"
+	"github.com/sirupsen/logrus"
 	"go.uber.org/zap"
 	"os"
+	"os/signal"
+	"syscall"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/core"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
@@ -24,6 +28,8 @@ import (
 // @name                        x-token
 // @BasePath                    /
 func main() {
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 	global.GVA_VP = core.Viper() // 初始化Viper
 	initialize.OtherInit()
 	global.GVA_LOG = core.Zap() // 初始化zap日志库
@@ -40,8 +46,27 @@ func main() {
 	}
 	//dev()
 	core.RunWindowsServer()
-}
 
+	WaitForSignal(ctx, syscall.SIGINT, syscall.SIGTERM)
+
+}
+func WaitForSignal(ctx context.Context, signals ...os.Signal) os.Signal {
+	var sigC = make(chan os.Signal, 1)
+	signal.Notify(sigC, signals...)
+	defer signal.Stop(sigC)
+
+	select {
+	case sig := <-sigC:
+		logrus.Warnf("%v", sig)
+		return sig
+
+	case <-ctx.Done():
+		return nil
+
+	}
+
+	return nil
+}
 func dev() {
 	pwd, _ := os.Getwd()
 

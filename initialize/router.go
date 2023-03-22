@@ -78,7 +78,7 @@ func Routers() *gin.Engine {
 	botsRouter.InitGvmPositionsRouter(PrivateGroup)
 	botsRouter.InitGvmTradesRouter(PrivateGroup)
 	botsRouter.InitGvmStrategieRouter(PrivateGroup)
-	botsRouter.InitGvmBaseRouter(PrivateGroup)
+	botsRouter.InitGvmBaseRouter(PublicGroup)
 	botsRouter.InitGvmExchangeRouter(PrivateGroup)
 	botsRouter.InitGvmAlarmRouter(PrivateGroup)
 

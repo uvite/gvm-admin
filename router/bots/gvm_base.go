@@ -9,21 +9,26 @@ import (
 type GvmBaseRouter struct {
 }
 
-// 
 func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
+	ws := Router.Group("ws")
 	gvmBaseRouter := Router.Group("gmvBase").Use(middleware.OperationRecord())
 	gvmBaseAuthRouter := Router.Group("gmvBase").Use(middleware.BotAuth())
 	var gvmBotsApi = v1.ApiGroupApp.BotsApiGroup.GvmBaseApi
 	{
 
+		//gvmBaseRouter.POST("vm/file", gvmBotsApi.RunVm)   // 新建GvmBots
+		gvmBaseRouter.POST("gvm/test", gvmBotsApi.RunTest)         // 新建GvmBots
+		gvmBaseRouter.POST("gvm/testcode", gvmBotsApi.RunTestCode) // 新建GvmBots
 
-		gvmBaseRouter.POST("vm/file", gvmBotsApi.RunVm)             // 新建GvmBots
-		gvmBaseRouter.POST("vm/sync", gvmBotsApi.RunSync)             // 新建GvmBots
+		///gvmBaseRouter.POST("gvm/", gvmBotsApi.RunTestCode) // 新建GvmBots
 
 	}
 	{
 		gvmBaseAuthRouter.POST("gvm/run", gvmBotsApi.Run)
-		gvmBaseAuthRouter.POST("gvm/code", gvmBotsApi.RunSync)
+		//gvmBaseAuthRouter.POST("gvm/code", gvmBotsApi.RunSync)
+	}
+	{
+		ws.GET("", gvmBotsApi.WebSocket)
 	}
 
 }
