@@ -50,6 +50,12 @@ func (gvmBotsService *GvmBotsService)GetGvmBotsLogin(bot botsReq.GvmBotsLogin) (
 	err = global.GVA_DB.Where("app_id = ? and app_secret =?", bot.AppId,bot.AppSecret).First(&gvmBots).Error
 	return
 }
+// GetGvmBots 根据id获取GvmBots记录
+// Author [piexlmax](https://github.com/piexlmax)
+func (gvmBotsService *GvmBotsService)CheckGvmBotsLogin(AppId string,AppSecret string) (gvmBots bots.GvmBots, err error) {
+	err = global.GVA_DB.Where("app_id = ? and app_secret =?",  AppId, AppSecret).First(&gvmBots).Error
+	return
+}
 
 // GetGvmBotsInfoList 分页获取GvmBots记录
 // Author [piexlmax](https://github.com/piexlmax)

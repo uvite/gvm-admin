@@ -69,3 +69,13 @@ func (gvmExchangeService *GvmExchangeService) GetGvmExchangeByCode(code string) 
 	err = global.GVA_DB.Where("code = ?", code).First(&gvmExchange).Error
 	return
 }
+func (gvmExchangeService *GvmExchangeService) GetGvmExchangeInfoAll( ) (list []bots.GvmExchange , err error) {
+
+	// 创建db
+	db := global.GVA_DB.Model(&bots.GvmExchange{})
+	var gvmExchange []bots.GvmExchange
+
+
+	err = db.Find(&gvmExchange).Error
+	return gvmExchange, err
+}

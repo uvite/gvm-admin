@@ -23,5 +23,8 @@ func (s *GvmExchangeRouter) InitGvmExchangeRouter(Router *gin.RouterGroup) {
 	{
 		gvmExchangeRouterWithoutRecord.GET("findGvmExchange", gvmExchangeApi.FindGvmExchange)        // 根据ID获取GvmExchange
 		gvmExchangeRouterWithoutRecord.GET("getGvmExchangeList", gvmExchangeApi.GetGvmExchangeList)  // 获取GvmExchange列表
+		gvmExchangeRouterWithoutRecord.GET("getGvmExchangeAll", gvmExchangeApi.GetGvmExchangeAll)  // 获取GvmExchange列表
+
+
 	}
 }

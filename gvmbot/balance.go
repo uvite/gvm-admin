@@ -37,9 +37,9 @@ func (ex Exchange) GetBalance() (balance *types.Balance, ok error) {
 		fmt.Printf("%s", balance.String())
 		db := global.GVA_DB
 		dt := &bots.GvmBalance{
-			ExchangeId:      ex.exchangeId,
-			Available: balance.Available.String(),
-			Locked:    balance.Locked.String(),
+			ExchangeCode: ex.exchangeId,
+			Available:    balance.Available.String(),
+			Locked:       balance.Locked.String(),
 		}
 		db.Create(dt)
 

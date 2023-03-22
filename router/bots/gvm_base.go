@@ -12,6 +12,7 @@ type GvmBaseRouter struct {
 // 
 func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
 	gvmBaseRouter := Router.Group("gmvBase").Use(middleware.OperationRecord())
+	gvmBaseAuthRouter := Router.Group("gmvBase").Use(middleware.BotAuth())
 	var gvmBotsApi = v1.ApiGroupApp.BotsApiGroup.GvmBaseApi
 	{
 
@@ -19,6 +20,10 @@ func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
 		gvmBaseRouter.POST("vm/file", gvmBotsApi.RunVm)             // 新建GvmBots
 		gvmBaseRouter.POST("vm/sync", gvmBotsApi.RunSync)             // 新建GvmBots
 
+	}
+	{
+		gvmBaseAuthRouter.POST("gvm/run", gvmBotsApi.Run)
+		gvmBaseAuthRouter.POST("gvm/code", gvmBotsApi.RunSync)
 	}
 
 }

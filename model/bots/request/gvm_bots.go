@@ -24,6 +24,6 @@ type GvmBotsLogin struct {
 	Side         string `json:"side" form:"side"`
 	Limit        string `json:"limit" form:"limit"`
 	Stop         string `json:"stop" form:"stop"`
-	Price        int    `json:"price" form:"price"`
-	Size         int    `json:"size" form:"size"`
+	Price        string `json:"price" form:"price"`
+	Size         string `json:"size" form:"size"`
 }

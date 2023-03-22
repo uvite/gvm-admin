@@ -6,6 +6,7 @@ import (
 	"github.com/dop251/goja"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/gvmbot"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/bots"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/bots/request"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/common/response"
 	"github.com/gin-gonic/gin"
@@ -16,6 +17,46 @@ import (
 )
 
 type GvmBaseApi struct {
+}
+
+// 执行文件,需要验证
+func (GvmBaseApi *GvmBaseApi) Run(c *gin.Context) {
+	var options request.GvmBotsLogin
+	err := c.ShouldBindJSON(&options)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+
+	exbots, ok := c.Get("exbots")
+	if !ok {
+		response.FailWithMessage("获取失败，不存在交易所Api", c)
+	}
+	bot := exbots.(bots.GvmBots)
+	fmt.Printf("[bot]:%+v", bot)
+	file := options.File + ".js"
+	pwd, _ := os.Getwd()
+
+	fmt.Printf("%+v", options)
+
+	_cwd := fmt.Sprintf("%s/%s", pwd, "js")
+	//_cwd := "/gvm/gvmbot/js"
+	file = filepath.Join(_cwd, file)
+
+	envpath := fmt.Sprintf("%s/%s", bot.Path, ".env.local")
+	configpath := fmt.Sprintf("%s/%s", bot.Path, "bbgo.yaml")
+
+	fmt.Println("envpath", envpath)
+	fmt.Println("configpath", configpath)
+	fmt.Println("code", *bot.ExchangeCode)
+	ex := gvmbot.New(envpath, configpath, *bot.ExchangeCode)
+	res, err := GvmBaseApi.RunCode(ex, file, options)
+	if err != nil {
+		response.FailWithMessage(fmt.Sprintf("执行错误:%s", err), c)
+
+	}
+	response.OkWithData(res, c)
+
 }
 
 // 交易数据同步

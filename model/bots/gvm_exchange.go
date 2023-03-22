@@ -8,6 +8,7 @@ import (
 // GvmExchange 结构体
 type GvmExchange struct {
 	global.GVA_MODEL
+	Name       string `json:"name" form:"name" gorm:"column:name;"`
 	Exchange   string `json:"exchange" form:"exchange" gorm:"column:exchange;comment:api路径;size:191;"`
 	Code       string `json:"code" form:"code" gorm:"column:code;comment:api路径;size:191;"`
 	ApiKey     string `json:"apiKey" form:"apiKey" gorm:"column:api_key;comment:api中文描述;size:191;"`

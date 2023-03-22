@@ -71,17 +71,16 @@ func Routers() *gin.Engine {
 		exampleRouter.InitFileUploadAndDownloadRouter(PrivateGroup) // 文件上传下载功能路由
 
 	}
-	{
-		botsRouter := router.RouterGroupApp.Bots
-		botsRouter.InitGvmBalanceRouter(PrivateGroup)
-		botsRouter.InitGvmBotsRouter(PrivateGroup)
-		botsRouter.InitGvmPositionsRouter(PrivateGroup)
-		botsRouter.InitGvmTradesRouter(PrivateGroup)
-		botsRouter.InitGvmStrategieRouter(PrivateGroup)
-		botsRouter.InitGvmBaseRouter(PrivateGroup)
-		botsRouter.InitGvmExchangeRouter(PrivateGroup)
-		botsRouter.InitGvmAlarmRouter(PrivateGroup)
-	}
+
+	botsRouter := router.RouterGroupApp.Bots
+	botsRouter.InitGvmBalanceRouter(PrivateGroup)
+	botsRouter.InitGvmBotsRouter(PrivateGroup)
+	botsRouter.InitGvmPositionsRouter(PrivateGroup)
+	botsRouter.InitGvmTradesRouter(PrivateGroup)
+	botsRouter.InitGvmStrategieRouter(PrivateGroup)
+	botsRouter.InitGvmBaseRouter(PrivateGroup)
+	botsRouter.InitGvmExchangeRouter(PrivateGroup)
+	botsRouter.InitGvmAlarmRouter(PrivateGroup)
 
 	global.GVA_LOG.Info("router register success")
 	return Router

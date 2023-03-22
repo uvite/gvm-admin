@@ -66,7 +66,7 @@ func (gvmBalanceService *GvmBalanceService) GetGvmBalanceInfoList(info botsReq.G
 	return gvmBalances, total, err
 }
 
-func (gvmBalanceService *GvmBalanceService) GetGvmBalanceByExchange(exchange_id string) (gvmBalance bots.GvmBalance, err error) {
-	err = global.GVA_DB.Where("exchange_id = ?", exchange_id).Order("id desc").First(&gvmBalance).Error
+func (gvmBalanceService *GvmBalanceService) GetGvmBalanceByExchange(exchange_code string) (gvmBalance bots.GvmBalance, err error) {
+	err = global.GVA_DB.Where("exchange_code = ?", exchange_code).Order("id desc").First(&gvmBalance).Error
 	return
 }

@@ -177,8 +177,8 @@ func (gvmBotsApi *GvmBotsApi) GetGvmBotsList(c *gin.Context) {
 func (gvmBotsApi *GvmBotsApi) GetGvmBotAppSecret(c *gin.Context) {
 
 	botId, err := rand.Int(rand.Reader, big.NewInt(128))
-
 	seed, err := rand.Int(rand.Reader, big.NewInt(128))
+	index, err := rand.Int(rand.Reader, big.NewInt(128))
 	wallet := global.GVA_CONFIG.Wallet
 	masterSeed := hdwallet.Seed(wallet.Mnemonic, wallet.Password)
 	fmt.Println("masterSeed : ", masterSeed)
@@ -190,7 +190,7 @@ func (gvmBotsApi *GvmBotsApi) GetGvmBotAppSecret(c *gin.Context) {
 
 	// 3. Calculating Dreiven path index(uint32) and generate derive childkey form path
 	// example => ethPath = "m/44'/60'/0'/0/0"
-	ethPath := fmt.Sprintf("m/44'/60'/%d'/%d/0", botId, seed)
+	ethPath := fmt.Sprintf("m/44'/60'/%d'/%d/%d", botId, seed, index)
 	fmt.Println(ethPath)
 	childKey, err := hdwallet.DeriveKeyFromPath(masterKey, ethPath)
 	if err != nil {
@@ -208,15 +208,12 @@ func (gvmBotsApi *GvmBotsApi) GetGvmBotAppSecret(c *gin.Context) {
 	addressETH := hdwallet.GenerateAddressETH(pubKey)
 
 	fmt.Println("ETH Address : ", addressETH)
-
-	b := make([]byte, 32)
-	m, err := rand.Read(b)
-	response.OkWithData(gin.H{"app_id": b[:m], "app_secret": addressETH}, c)
+	appId := fmt.Sprintf("%d-%d-%d", botId, seed, index)
+	response.OkWithData(gin.H{"app_id": appId, "app_secret": addressETH}, c)
 
 }
 
 func (gvmBotsApi *GvmBotsApi) GetGvmBotAppLogin(c *gin.Context) {
-
 
 	var gvmBots botsReq.GvmBotsLogin
 	err := c.ShouldBindQuery(&gvmBots)

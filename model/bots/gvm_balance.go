@@ -11,6 +11,7 @@ type GvmBalance struct {
 	global.GVA_MODEL
 
 	ExchangeId  string    `json:"exchange_id" form:"exchange_id" gorm:"column:exchange_id;comment:;size:20;"`
+	ExchangeCode  string    `json:"exchange_code" form:"exchange_code" gorm:"column:exchange_code;comment:;size:20;"`
 
 	Available string    `json:"available" form:"available" gorm:"column:available;"`
 	Locked    string    `json:"locked" form:"locked" gorm:"column:locked;"`

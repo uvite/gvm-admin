@@ -13,6 +13,7 @@ type GvmBalanceRouter struct {
 func (s *GvmBalanceRouter) InitGvmBalanceRouter(Router *gin.RouterGroup) {
 	gvmBalanceRouter := Router.Group("gvmBalance").Use(middleware.OperationRecord())
 	gvmBalanceRouterWithoutRecord := Router.Group("gvmBalance")
+	botAuth:=Router.Group("gvmBalance").Use(middleware.BotAuth())
 	var gvmBalanceApi = v1.ApiGroupApp.BotsApiGroup.GvmBalanceApi
 	{
 		gvmBalanceRouter.POST("createGvmBalance", gvmBalanceApi.CreateGvmBalance)             // 新建GvmBalance
@@ -21,7 +22,10 @@ func (s *GvmBalanceRouter) InitGvmBalanceRouter(Router *gin.RouterGroup) {
 		gvmBalanceRouter.PUT("updateGvmBalance", gvmBalanceApi.UpdateGvmBalance)              // 更新GvmBalance
 	}
 	{
-		gvmBalanceRouterWithoutRecord.GET("getGvmBalance", gvmBalanceApi.GetGvmBalance)
+
 		gvmBalanceRouterWithoutRecord.GET("getGvmBalanceList", gvmBalanceApi.GetGvmBalanceList) // 获取GvmBalance列表
+	}
+	{
+		botAuth.GET("getGvmBalance", gvmBalanceApi.GetGvmBalance)
 	}
 }

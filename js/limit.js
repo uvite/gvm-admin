@@ -6,12 +6,12 @@ export default function () {
     if (options.price > 0) {
         data.price = options.price
     }
-    if (options.stop > 0) {
-        data.stop = options.stop
+    if (options.limit > 0) {
+        data.limit = options.limit
     }
     data.comment= "止赢"
-    console.log("[11]",options)
-    let res = ex.exit("algo", options.side, data)
-    console.log("[22]",res)
+    console.log("[limit-1]",options)
+    let res = ex.entry("algo", options.side, data)
+    console.log("[limit-2]",res)
     return res
 }

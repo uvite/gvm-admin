@@ -1,6 +1,7 @@
 package bots
 
 import (
+	"fmt"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/bots"
 	botsReq "github.com/flipped-aurora/gin-vue-admin/server/model/bots/request"
@@ -178,10 +179,17 @@ func (gvmBalanceApi *GvmBalanceApi) GetGvmBalance(c *gin.Context) {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
-	if regvmBalance, err := gvmBalanceService.GetGvmBalanceByExchange(gvmBalance.ExchangeId); err != nil {
+	exbots, ok := c.Get("exbots")
+	if !ok {
+		response.FailWithMessage("获取失败", c)
+	}
+	bot := exbots.(bots.GvmBots)
+	fmt.Printf("%+v", bot)
+
+	if regvmBalance, err := gvmBalanceService.GetGvmBalanceByExchange(*bot.ExchangeCode); err != nil {
 		global.GVA_LOG.Error("查询失败!", zap.Error(err))
 		response.FailWithMessage("查询失败", c)
 	} else {
-		response.OkWithData( regvmBalance, c)
+		response.OkWithData(regvmBalance, c)
 	}
 }

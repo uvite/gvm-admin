@@ -171,3 +171,17 @@ func (gvmExchangeApi *GvmExchangeApi) GetGvmExchangeList(c *gin.Context) {
 		}, "获取成功", c)
 	}
 }
+func (gvmExchangeApi *GvmExchangeApi) GetGvmExchangeAll(c *gin.Context) {
+	var pageInfo botsReq.GvmExchangeSearch
+	err := c.ShouldBindQuery(&pageInfo)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+		return
+	}
+	if list, err := gvmExchangeService.GetGvmExchangeInfoAll(); err != nil {
+		global.GVA_LOG.Error("获取失败!", zap.Error(err))
+		response.FailWithMessage("获取失败", c)
+	} else {
+		response.OkWithDetailed(list, "获取成功", c)
+	}
+}
