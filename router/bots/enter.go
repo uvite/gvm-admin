@@ -9,4 +9,5 @@ type RouterGroup struct {
 	GvmExchangeRouter
 	GvmBaseRouter
 	GvmAlarmRouter
+	GwsRouter
 }

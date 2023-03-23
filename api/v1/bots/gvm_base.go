@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/adshao/go-binance/v2"
 	"github.com/dop251/goja"
+	socketio "github.com/flipped-aurora/gin-vue-admin/server/api/v1/websocket"
+	uuid "github.com/satori/go.uuid"
 	vite "github.com/uvite/gvm/tart/floats"
 	"github.com/uvite/gvmbot/pkg/fixedpoint"
 
@@ -29,6 +31,7 @@ type GvmOptions struct {
 	Exchange string `json:"exchange" form:"exchange"`
 	Symbol   string `json:"symbol" form:"symbol"`
 	Interval string `json:"interval" form:"interval"`
+	Sname    string `json:"sname" form:"sname"`
 	Code     string `json:"code" form:"code"`
 }
 type GvmBotTest struct {
@@ -41,6 +44,11 @@ type GvmBotTest struct {
 }
 type GvmBaseApi struct {
 	Cancel context.CancelFunc
+}
+
+func (GvmBaseApi *GvmBaseApi) UUID(c *gin.Context) {
+	uuid := uuid.NewV4()
+	response.OkWithData(uuid, c)
 }
 
 // 机器人功能 执行文件,需要验证
@@ -136,6 +144,7 @@ func (GvmBaseApi *GvmBaseApi) RunTestCode(c *gin.Context) {
 	if GvmBaseApi.Cancel != nil {
 		GvmBaseApi.Cancel()
 	}
+
 	var options GvmBotTest
 	err := c.ShouldBindJSON(&options)
 	if err != nil {
@@ -147,6 +156,9 @@ func (GvmBaseApi *GvmBaseApi) RunTestCode(c *gin.Context) {
 	options.low = &vite.Slice{}
 	options.open = &vite.Slice{}
 	options.volume = &vite.Slice{}
+	fmt.Printf("[bot]:%+v", options)
+	qvm := socketio.New()
+	qvm.SetName(options.Sname)
 
 	gvm, _ := engine.NewGvm()
 	pwd, _ := os.Getwd()
@@ -169,7 +181,7 @@ func (GvmBaseApi *GvmBaseApi) RunTestCode(c *gin.Context) {
 	gvm.Runner = r
 	gvm.Runtime = r.Bundle.Vm
 
-	ctx, cancel := context.WithCancel(context.Background())
+	ctx, cancel := context.WithCancel(c)
 	GvmBaseApi.Cancel = cancel
 	defer cancel()
 	gvm.Ctx = ctx
@@ -181,18 +193,19 @@ func (GvmBaseApi *GvmBaseApi) RunTestCode(c *gin.Context) {
 	gvm.Set("high", options.high)
 	gvm.Set("volume", options.volume)
 	gvm.Set("symbol", options.Symbol)
-
+	gvm.Set("alert", qvm.Alert)
+	gvm.Set("plot", qvm.Plot)
+	gvm.Set("sname", options.Sname)
 	go func() {
 		GvmBaseApi.Kline(options, gvm)
 	}()
-	fmt.Println("[2]")
+
 	gvm.Vu.RunOnce()
 
 }
 func (g *GvmBaseApi) Kline(gb GvmBotTest, vm *engine.Gvm) {
 
 	var client = binance.NewClient("", "")
-
 	klines, err := client.NewKlinesService().Symbol(gb.Symbol).
 		Interval(gb.Interval).Do(context.Background())
 	if err != nil {

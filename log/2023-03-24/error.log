@@ -1,0 +1,16 @@
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 00:44:39.468	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 02:34:05.914	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 02:43:33.449	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 02:48:16.578	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 03:09:23.098	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 03:17:51.551	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 03:24:13.523	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 03:42:36.939	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 03:44:43.297	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:04:44.125	[31merror[0m	/pine/gvm-admin/core/server.go:41	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:13:55.290	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:17:10.027	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:18:38.604	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:23:29.412	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:24:57.875	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection
+[github.com/flipped-aurora/gin-vue-admin/server]2023/03/24 - 04:29:56.846	[31merror[0m	/pine/gvm-admin/core/server.go:42	accept tcp [::]:7654: use of closed network connection

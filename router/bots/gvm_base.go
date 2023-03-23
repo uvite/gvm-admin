@@ -10,7 +10,7 @@ type GvmBaseRouter struct {
 }
 
 func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
-	ws := Router.Group("ws")
+
 	gvmBaseRouter := Router.Group("gmvBase").Use(middleware.OperationRecord())
 	gvmBaseAuthRouter := Router.Group("gmvBase").Use(middleware.BotAuth())
 	var gvmBotsApi = v1.ApiGroupApp.BotsApiGroup.GvmBaseApi
@@ -25,10 +25,9 @@ func (s *GvmBaseRouter) InitGvmBaseRouter(Router *gin.RouterGroup) {
 	}
 	{
 		gvmBaseAuthRouter.POST("gvm/run", gvmBotsApi.Run)
+		gvmBaseAuthRouter.POST("gvm/uuid", gvmBotsApi.UUID)
+
 		//gvmBaseAuthRouter.POST("gvm/code", gvmBotsApi.RunSync)
-	}
-	{
-		ws.GET("", gvmBotsApi.WebSocket)
 	}
 
 }

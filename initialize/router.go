@@ -1,6 +1,7 @@
 package initialize
 
 import (
+	socketio "github.com/flipped-aurora/gin-vue-admin/server/api/v1/websocket"
 	"net/http"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/docs"
@@ -16,6 +17,7 @@ import (
 
 func Routers() *gin.Engine {
 	Router := gin.Default()
+
 	InstallPlugin(Router) // 安装插件
 	systemRouter := router.RouterGroupApp.System
 	exampleRouter := router.RouterGroupApp.Example
@@ -78,10 +80,11 @@ func Routers() *gin.Engine {
 	botsRouter.InitGvmPositionsRouter(PrivateGroup)
 	botsRouter.InitGvmTradesRouter(PrivateGroup)
 	botsRouter.InitGvmStrategieRouter(PrivateGroup)
-	botsRouter.InitGvmBaseRouter(PublicGroup)
+	botsRouter.InitGvmBaseRouter(PrivateGroup)
 	botsRouter.InitGvmExchangeRouter(PrivateGroup)
 	botsRouter.InitGvmAlarmRouter(PrivateGroup)
-
+	botsRouter.InitGwsRouter(PublicGroup)
+	go socketio.ListenToWsChannel()
 	global.GVA_LOG.Info("router register success")
 	return Router
 }
